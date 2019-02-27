@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ciudad.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="BL\CiudadesBL.cs" />
+    <Compile Include="BL\ClientesBL.cs" />
+    <Compile Include="Modelos\Ciudad.cs" />
+    <Compile Include="Modelos\Cliente.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +79,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Ventas.BL.CiudadesBL.datasource" />
+    <None Include="Properties\DataSources\Ventas.BL.ClientesBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
