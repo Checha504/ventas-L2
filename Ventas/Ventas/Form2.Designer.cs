@@ -84,7 +84,7 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(32, 89);
+            idLabel.Location = new System.Drawing.Point(32, 66);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 5;
@@ -93,7 +93,7 @@
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(32, 63);
+            nombreLabel.Location = new System.Drawing.Point(32, 89);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 7;
@@ -149,6 +149,7 @@
             // 
             // listadeclientesBindingSource
             // 
+            this.listadeclientesBindingSource.AllowNew = true;
             this.listadeclientesBindingSource.DataSource = typeof(Ventas.Modelos.Cliente);
             // 
             // bindingNavigatorCountItem
@@ -230,7 +231,6 @@
             // listadeclientesBindingNavigatorSaveItem
             // 
             this.listadeclientesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listadeclientesBindingNavigatorSaveItem.Enabled = false;
             this.listadeclientesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listadeclientesBindingNavigatorSaveItem.Image")));
             this.listadeclientesBindingNavigatorSaveItem.Name = "listadeclientesBindingNavigatorSaveItem";
             this.listadeclientesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
@@ -247,7 +247,7 @@
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeclientesBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(93, 86);
+            this.idTextBox.Location = new System.Drawing.Point(93, 63);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 20);
             this.idTextBox.TabIndex = 6;
@@ -255,7 +255,7 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listadeclientesBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(93, 60);
+            this.nombreTextBox.Location = new System.Drawing.Point(93, 89);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombreTextBox.TabIndex = 8;

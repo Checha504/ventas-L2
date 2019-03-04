@@ -15,6 +15,12 @@ namespace Ventas.Modelos
         public int CiudadId { get; set; }
         public string Direccion { get; set; }
 
+        public Cliente()
+        {
+            Ciudad = new Ciudad(1, "San Pedro Sula");
+            CiudadId = Ciudad.Id;
+        }
+
         public Cliente(int id, string nombre, string telefono, Ciudad ciudad, string direccion)
         {
 

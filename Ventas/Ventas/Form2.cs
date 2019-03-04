@@ -17,13 +17,13 @@ namespace Ventas
         {
             InitializeComponent();
 
-            var clientesBL = new ClientesBL();
-            listadeclientesBindingSource.DataSource = clientesBL.Listadeclientes;
-
-            var ciudadesBL = new CiudadesBL();
-            listadeciudadesBindingSource.DataSource = ciudadesBL.Listadeciudades;
+            
         }
 
-
+        public void cargarDatos(ClientesBL clientesBL, CiudadesBL ciudadesBL)
+        {
+            listadeclientesBindingSource.DataSource = clientesBL.Listadeclientes;
+            listadeciudadesBindingSource.DataSource = ciudadesBL.Listadeciudades;
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ventas.BL;
 
 namespace Ventas
 {
@@ -15,11 +16,16 @@ namespace Ventas
         public Form1()
         {
             InitializeComponent();
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void cargarDatos(ProductosBL productosBL, CategoriasBL categoriasBL)
         {
-            MessageBox.Show("No importa qué tan lento vayas, siempre y cuando no te detengas.");
+            listadeProductosBindingSource.DataSource = productosBL.ListadeProductos;
+
+            listadeCategoriasBindingSource.DataSource = categoriasBL.ListadeCategorias;
+
         }
+
     }
 }
