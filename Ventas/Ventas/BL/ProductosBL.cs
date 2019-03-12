@@ -17,6 +17,16 @@ namespace Ventas.BL
             ListadeProductos = new BindingList<Producto>();
             CrearDatosdePrueba();
         }
+        public double ObtenerPrecio(int id)
+        {
+            double precio =0 ;
+            foreach (var Producto in ListadeProductos)
+            {
+                if (Producto.Id == id)
+                    precio = Producto.Precio;
+            }
+            return precio;
+        }
 
         private void CrearDatosdePrueba()
         {

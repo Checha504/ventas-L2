@@ -17,6 +17,8 @@ namespace Ventas
         CiudadesBL _ciudadesBL;
         ProductosBL _productosBL;
         CategoriasBL _categoriasBL;
+        FacturaBL _facturaBL;
+
         public Menu()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace Ventas
             _ciudadesBL = new CiudadesBL();
             _productosBL = new ProductosBL();
             _categoriasBL = new CategoriasBL();
+            _facturaBL = new FacturaBL();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,6 +45,16 @@ namespace Ventas
 
             formProductos.cargarDatos(_productosBL, _categoriasBL);
             formProductos.Show();
+        }
+
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formFactura = new Form3();
+            formFactura.MdiParent = this;
+
+            formFactura.cargarDatos(_facturaBL, _clientesBL, _productosBL);
+            formFactura.Show();
+
         }
     }
 }
