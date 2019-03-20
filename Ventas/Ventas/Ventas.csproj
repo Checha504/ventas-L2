@@ -49,13 +49,27 @@
     <Compile Include="BL\CategoriasBL.cs" />
     <Compile Include="BL\CiudadesBL.cs" />
     <Compile Include="BL\ClientesBL.cs" />
+    <Compile Include="BL\ComprasBL.cs" />
     <Compile Include="BL\FacturaBL.cs" />
     <Compile Include="BL\ProductosBL.cs" />
+    <Compile Include="BL\ProveedorBL.cs" />
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompras.Designer.cs">
+      <DependentUpon>FormCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProveedor.Designer.cs">
+      <DependentUpon>FormProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -78,8 +92,10 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Compras.cs" />
     <Compile Include="Modelos\Factura.cs" />
     <Compile Include="Modelos\Producto.cs" />
+    <Compile Include="Modelos\Proveedor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -90,6 +106,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCompras.resx">
+      <DependentUpon>FormCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProveedor.resx">
+      <DependentUpon>FormProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -106,8 +128,10 @@
     <None Include="Properties\DataSources\Ventas.BL.CategoriasBL.datasource" />
     <None Include="Properties\DataSources\Ventas.BL.CiudadesBL.datasource" />
     <None Include="Properties\DataSources\Ventas.BL.ClientesBL.datasource" />
+    <None Include="Properties\DataSources\Ventas.BL.ComprasBL.datasource" />
     <None Include="Properties\DataSources\Ventas.BL.FacturaBL.datasource" />
     <None Include="Properties\DataSources\Ventas.BL.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\Ventas.BL.ProveedorBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

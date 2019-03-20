@@ -18,6 +18,8 @@ namespace Ventas
         ProductosBL _productosBL;
         CategoriasBL _categoriasBL;
         FacturaBL _facturaBL;
+        ProveedorBL _proveedoresBL;
+        ComprasBL _comprasBL;
 
         public Menu()
         {
@@ -27,6 +29,8 @@ namespace Ventas
             _productosBL = new ProductosBL();
             _categoriasBL = new CategoriasBL();
             _facturaBL = new FacturaBL();
+            _proveedoresBL = new ProveedorBL();
+            _comprasBL = new ComprasBL();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +59,24 @@ namespace Ventas
             formFactura.cargarDatos(_facturaBL, _clientesBL, _productosBL);
             formFactura.Show();
 
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formProveedor = new FormProveedor();
+            formProveedor.MdiParent = this;
+
+            formProveedor.cargarDatos(_proveedoresBL);
+            formProveedor.Show();
+        }
+
+        private void comprasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var formCompras = new FormCompras();
+            formCompras.MdiParent = this;
+
+            formCompras.CargarDatos(_comprasBL, _proveedoresBL, _productosBL);
+            formCompras.Show();
         }
     }
 }

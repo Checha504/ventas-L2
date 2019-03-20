@@ -17,6 +17,22 @@ namespace Ventas.BL
             ListadeProductos = new BindingList<Producto>();
             CrearDatosdePrueba();
         }
+
+        public double ObtenerCosto(double id)
+        {
+            double costo = 0;
+            foreach (var Producto in ListadeProductos)
+            {
+                if (Producto.Id == id)
+                {
+                    costo = Producto.Costo;
+                }
+                
+            }
+            return costo;
+
+        }
+
         public double ObtenerPrecio(int id)
         {
             double precio =0 ;
@@ -33,9 +49,9 @@ namespace Ventas.BL
             var categoria1 = new Categoria(1, "Laptops");
             var categoria2 = new Categoria(2, "Accesorios");
 
-            var producto1 = new Producto(1, "Laptop DELL", 15000, categoria1);
-            var producto2 = new Producto(2, "Laptop ASUS", 20000, categoria1);
-            var producto3 = new Producto(3, "Mouse Logitech", 200, categoria2);
+            var producto1 = new Producto(1, "Laptop DELL", 15000, categoria1, 10000);
+            var producto2 = new Producto(2, "Laptop ASUS", 20000, categoria1, 14000);
+            var producto3 = new Producto(3, "Mouse Logitech", 200, categoria2, 80);
 
             ListadeProductos.Add(producto1);
             ListadeProductos.Add(producto2);

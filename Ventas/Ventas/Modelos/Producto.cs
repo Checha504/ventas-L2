@@ -11,6 +11,7 @@ namespace Ventas.Modelos
         public int Id { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
+        public double Costo { get; set; }
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
 
@@ -20,13 +21,14 @@ namespace Ventas.Modelos
             CategoriaId = Categoria.Id;
         }
 
-        public Producto(int id, string descripcion, double precio, Categoria categoria)
+        public Producto(int id, string descripcion, double precio, Categoria categoria, double costo)
         {
             Id = id;
             Descripcion = descripcion;
             Precio = precio;
             Categoria = categoria;
             CategoriaId = categoria.Id;
+            Costo = costo;
         }
 
     }

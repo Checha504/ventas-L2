@@ -23,9 +23,9 @@ namespace Ventas.BL
             var ciudad1 = new Ciudad(1, "San Pedro Sula");
             var ciudad2 = new Ciudad(2, "Tegucigalpa");
 
-            var cliente1 = new Cliente(1401, "Juan", "87878787", ciudad1, "Villas del Sol");
-            var cliente2 = new Cliente(1402, "Pedro", "99887788", ciudad2, "Colonia Kennedy");
-            var cliente3 = new Cliente(1403, "Oscar", "33224585", ciudad1, "Jardines del Valle");
+            var cliente1 = new Cliente(1401, "Juan Perez", "87878787", ciudad1, "Villas del Sol");
+            var cliente2 = new Cliente(1402, "Pedro Martinez", "99887788", ciudad2, "Colonia Kennedy");
+            var cliente3 = new Cliente(1403, "Oscar Lopez", "33224585", ciudad1, "Jardines del Valle");
 
             Listadeclientes.Add(cliente1);
             Listadeclientes.Add(cliente2);
