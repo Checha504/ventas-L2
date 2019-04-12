@@ -102,5 +102,24 @@ namespace Ventas
         {
             Application.Exit();
         }
+
+        private void reporteDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteProductos = new FormReporteProductos();
+            formReporteProductos.CargarDatos(_productosBL);
+            formReporteProductos.MdiParent = this;
+
+            formReporteProductos.Show();
+
+        }
+
+        private void totalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteVentas = new FormReportedeVentas();
+            formReporteVentas.CargarDatos(_facturaBL, _clientesBL);
+            formReporteVentas.MdiParent = this;
+
+            formReporteVentas.Show();
+        }
     }
 }
